@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/flipclock.css">
+        <link rel="stylesheet" href="js/cssanimation.css">
+        <link rel="stylesheet" href="js/jquery.bxslider.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
+        <title>nissin</title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/flipclock.min.js"></script>
+        <script src="js/scrolly.min.js"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                scrolly();
+
+                var clock = $('.clock').FlipClock(3600 * 24 * 18, {
+                    clockFace: 'DailyCounter',
+                    countdown: true
+                });
+
+                $('.slider').bxSlider({
+                    auto:true,
+                    speed:300
+                });
+
+                $('.mainList ul li').on('click',function(e){
+                    e.preventDefault();
+                    $except=$(this);
+                    $(this).animate({
+                        'paddingRight':'100px'
+                    },1050).siblings().animate({
+                        'paddingRight':'0'
+                    },1050);
+
+                    $(this).children('a').animate({
+                        'color':'rgba(0,0,0,1)',
+                        'backgroundColor':'rgba(255, 255, 255, 0.8)',
+                        'paddingRight':'100px'
+                    },1050);
+                    $('.mainList ul li').not($except).children('a').animate({
+                        'paddingRight':'0',
+                        'color':'rgba(0,0,0,0)',
+                        'backgroundColor':'rgba(0,0,0,0)'
+                    },1050);
+
+                    /*.not(this).children('a').animate({
+                        'paddingRight':'0';
+                    });*/
+
+                    var i=$(this).index();
+                    $('.mainVisual>div').eq(i).stop().animate({
+                        'left':'0'
+                    },1100).siblings().stop().animate({
+                        'left':'100%'
+                    },1100)
+                });
+                
+                $('.copyright i').on('click',function(){
+                    $('body, html').animate({
+                        'scrollTop':'0'
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <div class="logo">
+                    <h1><a href="#"><img src="img/Nissin_logo.png" class="logoImg">
+                        <div class="cook">
+                            <img src="img/dish.png">
+                                <div class="flowWrap">
+                                    <img src="img/flow.png">
+                                </div>    
+                        </div>    
+                    </a>    
+                    </h1>
+                </div>
+            <div class="allMenu">
+                <div class="menuWrap">    
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                        <ul class="menu">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">BRAND</a></li>
+                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">EVENT</a></li>
+                        </ul>
+                </div>
+            </div>
+            </div>
+        </header>
+        <section class="main">
+            <div class="wrap">    
+                <div class="mainList">
+                    <ul>
+                        <li><a href="#">RAMEN</a></li>
+                        <li><a href="#">CUP NOODLE</a></li>
+                        <li><a href="#">IN JAPAN</a></li>
+                        <li><a href="#">MUSEUM</a></li>
+                    </ul>
+                </div>
+                <div class="mainVisual">
+                    <div class="mainIn aboutUs1">
+                        <div class="mainBg"></div>
+                        <p>세계 최초의</p>
+                        <p>인스턴트 라면</p>
+                        <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    </div><!--main1-->
+                    <div class="mainIn aboutUs2">
+                        <div class="mainBg"></div>
+                        <p>"컵-누들은 상표가 아니다.</p>
+                        <p><span>대명사</span>다."</p>
+                        <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    </div><!--main2-->
+                    <div class="mainIn aboutUs3">
+                        <div class="mainBg"></div>
+                        <p>일본을</p>
+                        <p><span>휩쓸다</span></p>
+                        <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    </div><!--main3-->
+                    <div class="mainIn aboutUs4">
+                        <div class="mainBg"></div>
+                        <p><span>라면 박물관</span></p>
+                        <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    </div><!--main4-->
+                </div>
+            </div>    
+        </section>
+        <section class="cupNoodle">
+            <div class="wrap">
+                <div class="cnTop" data-scrolly-down="blurInTop">
+                    <h2><a href="#"><img src="img/cup_noodle_logo_no_bg.png"></a></h2>
+                    <img src="img/steam.png" class="steam">
+                    <div class="circle1">
+                        <a href="#">
+                            <p class="circleET"><i class="fas fa-carrot"></i></p>
+                            <div class="circleVisual">
+                            <p class="circleTxt">자연에서 온 재료들</p>
+                            <img src="img/circle1.jpg" class="circleImg">
+                            </div>  
+                        </a>    
+                    </div>
+                    <div class="circle2">
+                        <a href="#">
+                            <p class="circleET"><i class="fas fa-drumstick-bite"></i></p>
+                            <div class="circleVisual">
+                            <p class="circleTxt">비법 고기 토핑</p>
+                            <img src="img/circle2.jpg" class="circleImg">
+                            </div>
+                            </a>        
+                    </div>
+                    <div class="circle3">
+                        <a href="#">
+                            <p class="circleET"><i class="fas fa-heart"></i></p>
+                            <div class="circleVisual">
+                            <p class="circleTxt">결혼식에도 컵-누들?!</p><img src="img/circle3.jpg" class="circleImg">
+                            </div>
+                            </a>
+                    </div>
+                    <div class="circle4">
+                        <a href="#">
+                            <p class="circleET"><i class="fas fa-glass-cheers"></i></p>
+                            <div class="circleVisual">
+                            <p class="circleTxt">세계 판매 400억 개 돌파!</p>
+                            <img src="img/circle4.png" class="circleImg">
+                        </div>        
+                        </a>
+                    </div>
+                </div>
+                <div class="cnBottom">
+                    <div class="cnTxt2">
+                        <p>신제품 컵-누들 나이스를 비롯,</p><p>다양한 종류의 컵-누들이</p><p>한국 출시 임박!</p>
+                    </div>
+                    <div class="cnNice">
+                    </div>
+                    <div class="packages">
+                        <img src="img/cup_noodle_chili.png">
+                        <img src="img/cup_noodle_original.png">
+                        <img src="img/cup_noodle_seafood.png">
+                        <img src="img/cup_noodle_curry.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="brand">
+            <div class="wrap">
+                <div class="brand1">
+                    <a href="#">
+                        <p class="brandTxt">우동 돈베이</p>
+                        <img src="img/donbei_logo_no_bg.png" class="brandLogo">
+                        <div class="product">
+                            <img src="img/donbei_package_1.png">
+                            <img src="img/donbei_package_2.png">
+                        </div>
+                    </a>    
+                </div>
+                <div class="brand2">
+                    <a href="#">
+                        <p class="brandTxt">전통 야키소바</p>
+                        <img src="img/ufo_logo_no_bg.png" class="brandLogo">
+                        <div class="product">
+                            <img src="img/ufo_package_1.png">
+                            <img src="img/ufo_package_2.png">
+                        </div>
+                    </a>    
+                </div>
+            </div>    
+        </section>
+        <section class="shop">
+            <div class="wrap">
+                <h2>NISSIN ONLINE STORE COMING UP!</h2>
+                <div class="shopLeft">
+                    <img src="img/store_box_bg_change_no_logo.jpg">
+                </div>
+                <div class="shopRight">
+                    <div class="clock">
+                    
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <section class="event">
+             <div class="wrap">   
+                <div class="slider">
+                    <a href="#" class="event1">
+                        <p class="eventTxt">FLYiNG GET 사전 예약 이벤트</p>
+                    </a>
+                    <a href="#" class="event2">
+                        <p class="eventTxt">컵누들과 함께하는 여행</p>
+                    </a>
+                    <a href="#" class="event3">
+                        <p class="eventTxt">집들이 선물을 드립니다!</p>
+                    </a>
+                </div>
+            </div> 
+        </section>
+        <footer>
+            <div class="wrap">
+                <div class="copyright">
+                    <p>Copyright ©2019 NISSIN FOODS HOLDINGS CO.,LTD. All Rights Reserved.</p>
+                    <i class="fas fa-chevron-circle-up"></i>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

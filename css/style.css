@@ -1,0 +1,685 @@
+@charset 'utf-8';
+
+
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture');
+@font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+.wrap{
+    width:1100px;
+    margin:0 auto;
+}
+
+body{background:#fdb81b;}
+/*------------------header----------------*/
+
+header{
+    margin-top:50px;
+    margin-bottom:20px;
+    height:100px;
+}
+header .wrap{
+    position:relative;
+    height:100%;
+}
+header .wrap .logo{
+    position:absolute;
+    left:50%;
+    margin-left:-65px;
+    float:left;
+}
+header .wrap .logo h1{
+    position:relative;
+}
+header .wrap .logo h1 a{
+
+}
+.logoImg{
+    width:130px;
+    transition:all 0.5s;
+}
+.logo:hover .cook{
+    opacity:1;
+}
+.logo:hover .logoImg{
+    transform:translateY(30px) translateX(3px) scale(0.7) rotate(-10deg);
+}
+.logo:hover .flowWrap>img{
+    animation:flow 0.8s infinite alternate;
+}
+@keyframes flow{
+    0%{left:-100px;}
+    100%{left:0px;}
+}
+
+.cook{
+    position:absolute;
+    width:200px;
+    left:50%;
+    margin-lefT:-100px;
+    top:0;
+    opacity:0;
+    transition:all 1s;
+}
+.cook img{}
+.cook>img{
+    width:200px;
+    position:absolute;
+    left:50%;
+    margin-left:-100px;
+    top:-40px;
+}
+.flowWrap{
+    width:171px;
+    height:20px;
+    overflow:hidden;
+    position:relative;
+    margin-left:14px;
+}
+.flowWrap img{
+    position:absolute;
+    width:400px;
+    left:0;
+    top:0;
+}
+    
+.allMenu{
+    position:absolute;
+    right:0;
+    bottom:0;
+    opacity:0.8;
+    
+}
+.menuWrap>a{
+    
+}
+.menuWrap>a i{
+    font-size:40px;
+}
+.allMenu:hover{
+    opacity:1;
+    animation:btn 1s infinite alternate;
+}
+.allMenu:hover .menu{
+    display:block;
+}
+@keyframes btn{
+    0%{
+        
+        bottom:0px;
+    }
+    100%{
+        
+        bottom:-5px;
+    }
+}
+.menuWrap{
+    position:relative;
+}
+.menu{
+    display:none;
+    width:180px;
+    height:440px;
+    background:url(../img/tag_made.png) no-repeat center;
+    text-align:center;
+    line-height:2.5;
+    position:absolute;
+    left:0px;
+    top:40px;
+    margin-left:-70px;
+    z-index:1;
+}
+.menu li a{
+    font-size:20px;
+    font-family:Luckiest Guy;
+    font-style:italic;
+    color:#333;
+    
+}
+.menu li a:hover{
+    color:#000;
+}
+.menu li:first-child{
+    margin-top:120px;
+}
+
+/*-----------------main----------------*/
+
+.main{
+    margin-top:50px;
+    height:700px;
+}
+.main .wrap{
+    position:relative;
+}
+
+.mainList{
+    position:absolute;
+    left:0;
+    top:0;
+    height:700px;
+}
+.mainList ul{}
+.mainList ul li{
+    width:570px;
+    height:175px;
+    background:url(../img/history_01.jpg) no-repeat center;
+    background-size:cover;
+    text-align:right;
+    border-radius:50px;
+}
+.mainList ul li a{
+    display:block;
+    height:100%;
+    width:100%;
+    line-height:175px;
+    font-family:Luckiest Guy;
+    font-size:30px;
+    font-size:bold;
+    border-radius:50px;
+    color:rgba(0, 0, 0, 0);
+}
+.mainList ul li:nth-child(2) a{
+    color:rgba(0, 0, 0, 1);
+    background-color:rgba(255, 255, 255, 0.8);
+    padding-right:100px;
+}
+.mainList ul li:first-child{
+    
+}
+.mainList ul li:nth-child(2){
+    background-image:url(../img/history_02.jpg);
+    padding-right:100px;
+}
+.mainList ul li:nth-child(3){
+    background-image:url(../img/history_03.jpg);
+}
+.mainList ul li:last-child{
+    background-image:url(../img/history_05.jpg);
+}
+.mainList ul li a{}
+
+.mainVisual{
+    position:absolute;
+    right:0;
+    width:530px;
+    height:700px;
+    overflow:hidden;
+}
+.mainIn{
+    width:100%;
+    height:100%;
+    top:0;
+    left:100%;
+    position:absolute;
+}
+.mainVisual>div:nth-child(2){
+    left:0;
+}
+.mainVisual>div:nth-child(3){
+    overflow:hidden;
+}
+.mainBg{
+    background:url(../img/chiken_ramen_package.png) no-repeat center;
+    background-size:cover;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    position:absolute;
+}
+.aboutUs1 .mainBg{
+    background-size:450px;
+}
+.aboutUs2 .mainBg{
+    background-image:url(../img/cup_noodle_up.png);
+}
+.aboutUs3 .mainBg{
+    background-image:url(../img/timesquare.jpg);
+    border-radius:50px;
+    filter:blur(1px);
+}
+.aboutUs4 .mainBg{
+    background-image:url(../img/museum2.jpg);
+    background-position:right center;
+    border-radius:50px;
+}
+
+.mainIn p{
+    position:absolute;
+    display:inline-block;
+    background:rgba(255, 255, 255, 0.8);
+    margin-bottom:10px;
+    top:45%;
+    left:40%;
+    font-family:Black And White Picture;
+    font-size:18px;
+    letter-spacing:4px;
+}
+.mainIn p:first-of-type{
+    padding:9px;
+}
+.mainIn p:last-of-type{
+    top:53%;
+    left:62%;
+    padding:5px 10px;
+}
+.mainIn p span{
+    font-size:25px;
+}
+.mainIn a{
+    position:absolute;
+    top:60%;
+    left:80%;
+    margin-top:20px;
+    transition:all 0.5s;
+    z-index:100;
+    
+    animation:arrow 1s infinite alternate;
+}
+.mainIn a:hover i{
+    font-size:30px;
+}
+@keyframes arrow{
+    0%{left:80%;}
+    100%{left:82%;}
+}
+.mainIn a i{
+    font-size:25px;
+     transition:all 0.5s;
+}
+.aboutUs4 a i{
+    color:#fff;
+}
+
+/*----------------cupNoodle-----------*/
+
+.cupNoodle{
+    margin-top:50px;
+}
+.cupNoodle .wrap{}
+
+.cnTop{
+    position:relative;
+    text-align:center;
+    background:url(../img/cup_noodle_open500.png) no-repeat center;
+    background-position:bottom center;
+    height:700px;
+    margin-bottom:100px;
+}
+.cnTop h2{
+    z-index:2;
+    position:absolute;
+    left:50%;
+    margin-left:-200px;
+}
+.cnTop .steam{
+    position:absolute;
+    width:600px;
+    height:270px;
+    top:150px;
+    left:50%;
+    margin-left:-320px;
+    z-index:1;
+    opacity:0.5;
+}
+
+.cnTop>div{
+    position:absolute;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    
+}
+.cnTop>div>a{
+    display:block;
+    border-radius:50%;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.circle1{
+    top:230px;
+    left:5%;
+    
+    
+}
+.circle1 .circleET{
+    margin-top:-45px;
+}
+
+.circle2{
+    top:230px;
+    right:5%;
+}
+.circle2 .circleET{
+    margin-top:-43px;
+}
+
+.circle3{
+    top:460px;
+    left:5%;
+}
+.circle4{
+    top:460px;
+    right:5%;
+}
+.circle4 .circleET{
+    margin-left:-40px;
+}
+.circleET{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-33px;
+    margin-top:-40px;
+    font-size:65px;
+    color:#fff;
+    opacity:1;
+    transition:all 0.3s;
+}
+.circleTxt{
+    line-height:200px;
+    font-family:BRBA_B;
+    border-radius:50%;
+    font-size:18px;
+    background:rgba(255, 255, 255, 0.4);
+    font-weight:normal;
+}
+.circleImg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    left:0;
+    top:0;
+    z-index:-100;
+}
+.circleVisual{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    position:relative;
+    overflow:hidden;
+    transition:all 0.5s;
+    transform:scale(0)
+}
+
+.cnTop>div:hover .circleVisual{
+    transform: scale(1);
+
+}
+.cnTop>div:hover .circleET{
+    opacity:0;
+}
+
+.cnBottom{
+    position:relative;
+    height:350px;
+}
+
+.cnNice{
+    position:absolute;
+    left:0;
+    top:0;
+    background:url(../img/cup_noodle_nice_open.png) no-repeat center;
+    background-size:cover;
+    width:50%;
+    height:100%;
+    z-index:1;
+}
+.cnTxt2{
+    position:relative;
+    z-index:100;
+}
+.cnTxt2 p{
+    position:absolute;
+    font-size:25px;
+    font-family:BRBA_B;
+    font-size:20px;
+    background:rgba(255, 255, 255, 0.7);
+    padding:5px 10px;
+    left:50%;
+    
+}
+.cnTxt2 p:first-child{
+    margin-left:-220px;
+    
+}
+.cnTxt2 p:nth-child(2){
+    margin-left:-150px;
+    top:50px;
+}
+.cnTxt2 p:last-child{
+    margin-left:-50px;
+    top:100px;
+}
+
+.packages{
+    position:absolute;
+    right:0;
+    top:0;
+    width:50%;
+    height:100%;
+}
+.packages img{
+    width:100px;
+    
+}
+
+.packages img:first-child{
+    transform:translateX(100px) rotate(-25deg);
+}
+.packages img:nth-child(2){
+    transform:translateX(270px) translateY(30px) rotate(25deg);
+}
+.packages img:nth-child(3){
+    transform:rotate(20deg) translateX(0px) translateY(170px);
+}
+.packages img:last-child{
+    transform:translateX(20px) translateY(200px) rotate(-20deg);
+}
+
+/*--------------brand-----------------*/
+
+.brand{
+    height:300px;
+}
+.brand .wrap{
+    position:relative;
+}
+
+.brand .wrap>div{
+    width:50%;
+    height:300px;
+    z-index:0;
+    transition:all 0.5s;
+}
+.brand .wrap>div>a{
+    position:relative;
+    border-radius:30px;
+    display:block;
+    height:100%;
+    background-size:cover;
+}
+.brandTxt{
+    position:absolute;
+    color:#fff;
+    font-family:BRBA_B;
+    font-size:20px;
+    letter-spacing:2px;
+}
+.brandLogo{
+    position:absolute;
+    width:180px;
+}
+.product{
+    position:absolute;
+    top:10%;
+    opacity:0;
+}
+
+.brand1{
+    position:absolute;
+    left:0;
+    z-index:0;
+}
+.brand1 a{    
+    background:url(../img/donbei_bg.png) no-repeat center left;
+}
+.brand1 .brandTxt{
+    right:35px;
+    bottom:30%;
+}
+.brand1 .brandLogo{
+    right:0;
+    bottom:0;
+}
+.brand1 a .product{
+    right:10%;
+    transition:all 0.5s;
+}
+.brand1 a .product img{
+    width:100px;
+}
+
+.brand2{
+    position:absolute;
+    right:0;
+    text-align:right;    
+}
+.brand2 a{
+    background:url(../img/ufo_noodle.jpg) no-repeat center right;
+}
+.brand2 .brandTxt{
+    top:35%;
+    right:35px;
+}
+.brand2 .brandLogo{
+    right:0;
+}
+.brand2 a .product{
+    left:10%;
+    transition:all 0.5s;
+}
+.brand2 a .product img{
+    width:100px;
+}
+
+.brand .wrap>div:hover{
+    width:70%;
+    z-index:100;
+}
+.brand .wrap>div:hover .product{
+    opacity:1;
+}
+
+/*-----------------shop--------------*/
+
+.shop{
+    height:500px;
+}
+.shop .wrap{
+    position:relative;
+}
+.shop .wrap h2{
+    position:absolute;
+    right:0;
+    top:80px;
+    font-family:Luckiest Guy;
+    font-size:25px;
+    letter-spacing:3px;
+    color:#fff;
+    background:#ff0000;
+    padding:30px;
+    box-sizing:border-box;
+    border-radius:50px;
+}
+
+
+
+.shopLeft{
+    position:absolute;
+    top:100px;
+    width:40%;
+}
+.shopLeft img{
+    width:450px;
+}
+
+.shopRight{
+    position:absolute;
+    right:0;
+    top:250px;
+}
+
+/*---------------event--------------*/
+
+.event{
+    margin-top:50px;
+    margin-bottom:150px;
+}
+
+.event .wrap{}
+
+.slider{}
+.slider>a{
+    height:300px;
+    background:url(../img/flying_get.png) no-repeat center;
+    background-size:contain;
+    position:relative;
+}
+
+.bx-wrapper{
+    border:none;
+    border-radius:50px;
+}
+
+.bx-prev,.bx-next{
+    opacity:0.5;
+}
+
+.slider .event1{
+    
+}
+.slider .event2{
+    background-image:url(../img/event2.jpg);
+    background-size:cover;
+    background-position:0 -675px;
+    border-radius:50px;
+}
+.slider .event3{
+    background-image:url(../img/wellbeing1.jpg);
+}
+
+.eventTxt{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    font-family:BRBA_B;
+    font-size:25px;
+    
+    
+}
+/*--------------footer---------------*/
+
+footer{
+    background:rgb(253, 200, 80);
+    height:50px;
+    border-top:1px solid rgb(235, 211, 156);
+}
+.footer .wrap{}
+
+.copyright{}
+.copyright p{
+    line-height:50px;
+    float:left;
+}
+.copyright i{
+    float:right;
+    font-size:40px;
+    line-height:50px;
+    color:#ff0000;
+    cursor:pointer;
+}
