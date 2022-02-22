@@ -1,6 +1,6 @@
 # NISSIN
 
-> <https://babyazalea.github.io/nissin/>
+> <https://tyange.github.io/nissin/>
 
 * 니신 그룹의 프로모션 웹.
 
